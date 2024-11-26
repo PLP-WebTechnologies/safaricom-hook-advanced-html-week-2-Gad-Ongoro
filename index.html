@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Multimedia Webpage with Audio, Video, and Registration Form">
+    <title>Multimedia Webpage with Registration Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-blue-600 text-white p-6">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold">Multimedia Webpage & Registration Form</h1>
+        </div>
+    </header>
+
+    <!-- Part 1: Multimedia Webpage -->
+    <main class="container mx-auto p-8">
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Audio Player</h2>
+            <audio controls class="w-full">
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-semibold mb-4">Video Player</h2>
+            <video controls class="w-full" poster="https://via.placeholder.com/1200x600.png?text=Video+Poster">
+                <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+                <source src="https://www.w3schools.com/html/movie.ogg" type="video/ogg">
+                Your browser does not support the video element.
+            </video>
+        </section>
+    </main>
+
+    <!-- Part 2: Registration Form -->
+    <section class="container mx-auto p-8 bg-white rounded-lg shadow-md mt-12">
+        <h2 class="text-2xl font-semibold mb-6 text-center">User Registration</h2>
+
+        <form action="#" method="POST" class="space-y-6">
+            <!-- Full Name -->
+            <div>
+                <label for="fullName" class="block text-lg font-medium">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required maxlength="100" class="mt-2 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600">
+            </div>
+
+            <!-- Email Address -->
+            <div>
+                <label for="email" class="block text-lg font-medium">Email Address</label>
+                <input type="email" id="email" name="email" required class="mt-2 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600">
+            </div>
+
+            <!-- Password -->
+            <div>
+                <label for="password" class="block text-lg font-medium">Password</label>
+                <input type="password" id="password" name="password" required minlength="8" class="mt-2 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600">
+            </div>
+
+            <!-- Age -->
+            <div>
+                <label for="age" class="block text-lg font-medium">Age</label>
+                <input type="number" id="age" name="age" required min="18" class="mt-2 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600">
+            </div>
+
+            <!-- Gender -->
+            <div class="space-x-4">
+                <label class="inline-flex items-center">
+                    <input type="radio" name="gender" value="Male" class="form-radio text-blue-600" required>
+                    <span class="ml-2">Male</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="radio" name="gender" value="Female" class="form-radio text-blue-600" required>
+                    <span class="ml-2">Female</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="radio" name="gender" value="Other" class="form-radio text-blue-600" required>
+                    <span class="ml-2">Other</span>
+                </label>
+            </div>
+
+            <!-- Terms and Conditions -->
+            <div class="flex items-center">
+                <input type="checkbox" id="terms" name="terms" required class="form-checkbox text-blue-600">
+                <label for="terms" class="ml-2 text-lg">I agree to the terms and conditions</label>
+            </div>
+
+            <!-- Submit Button -->
+            <div>
+                <button type="submit" class="w-full py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    Register
+                </button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white text-center p-4 mt-12">
+        <p>&copy; 2024 Multimedia Webpage. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
